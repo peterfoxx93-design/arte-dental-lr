@@ -6,6 +6,8 @@ import AppointmentForm from './components/sections/AppointmentForm';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
+export const dynamic = 'force-dynamic';
+
 export default function Page() {
   return (
     <>

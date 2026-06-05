@@ -22,13 +22,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <div>
-                <p className="font-bold text-lg leading-tight">Arte Dental</p>
-                <p className="text-accent-300 text-xs">La Romana</p>
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="Arte Dental"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-3">
               Reflejando el arte en tu sonrisa. Cuidado dental profesional con calidez y excelencia.

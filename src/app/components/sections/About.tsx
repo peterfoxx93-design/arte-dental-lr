@@ -13,22 +13,22 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image column */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-primary-100 to-primary-200 overflow-hidden flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary-500 flex items-center justify-center">
-                  <Heart className="w-12 h-12 text-white" />
-                </div>
-                <p className="text-primary-700 font-semibold text-lg">Tu sonrisa, nuestra pasión</p>
-              </div>
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden group">
+              <img
+                src="/images/clinic-interior.jpg"
+                alt="Clínica Arte Dental La Romana"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-500/20 to-transparent" />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-primary-500/10 -z-10" />
-            <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-primary-500/10 -z-10" />
+            {/* Decorative elements */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-brand-500/10 -z-10" />
+            <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-accent-500/10 -z-10" />
           </div>
 
           {/* Text column */}
           <div>
-            <h2 className="section-title">Sobre Nosotros</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               En <strong>Arte Dental La Romana</strong> nos dedicamos a transformar sonrisas 
               con un enfoque humano y profesional. Desde nuestra fundación en 2018, hemos 
@@ -47,9 +47,9 @@ export default function About() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-4">
               {stats.map((stat, i) => (
-                <div key={i} className="text-center p-4 rounded-2xl bg-primary-50">
-                  <stat.icon className="w-6 h-6 text-primary-500 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-primary-700">{stat.value}</p>
+                <div key={i} className="text-center p-4 rounded-2xl bg-brand-50">
+                  <stat.icon className="w-6 h-6 text-brand-500 mx-auto mb-2" />
+                  <p className="text-2xl font-bold text-brand-700">{stat.value}</p>
                   <p className="text-xs text-gray-600">{stat.label}</p>
                 </div>
               ))}

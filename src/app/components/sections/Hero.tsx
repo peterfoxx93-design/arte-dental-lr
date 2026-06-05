@@ -3,6 +3,14 @@ import { Phone, MessageCircle, Sparkles, ArrowRight, Star } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-white">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.jpg"
+          alt=""
+          className="w-full h-full object-cover opacity-[0.04]"
+        />
+      </div>
       {/* Decorative background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-brand-50/50 via-brand-50/20 to-transparent" />

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar, Clock, Phone, MessageCircle, Instagram, Send } from 'lucide-react';
+import { Calendar, Clock, Phone, MessageCircle, Send } from 'lucide-react';
 
 const services = [
   'Selecciona un servicio',
@@ -201,7 +201,7 @@ export default function AppointmentForm() {
                   </div>
                 </a>
                 <a href="https://instagram.com/artedental_lr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-xl bg-white hover:shadow-md transition">
-                  <Instagram className="w-5 h-5 text-pink-500" />
+                  <svg className="w-5 h-5 text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                   <div>
                     <p className="text-xs text-gray-500">Instagram</p>
                     <p className="font-semibold text-gray-900">@artedental_lr</p>
@@ -217,7 +217,7 @@ export default function AppointmentForm() {
               rel="noopener noreferrer"
               className="block p-6 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 text-white text-center hover:shadow-xl transition-all duration-300"
             >
-              <Instagram className="w-10 h-10 mx-auto mb-2" />
+              <svg className="w-10 h-10 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               <p className="font-bold text-lg">@artedental_lr</p>
               <p className="text-sm text-white/80">Síguenos en Instagram</p>
               <p className="text-xs text-white/60 mt-1">4,864 seguidores</p>

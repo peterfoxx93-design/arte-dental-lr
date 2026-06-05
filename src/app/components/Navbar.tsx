@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Phone, Instagram } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -47,7 +47,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-pink-500 font-medium transition-colors duration-200 flex items-center gap-1"
             >
-              <Instagram className="w-4 h-4" />
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               IG
             </a>
             <a href="#citas" className="btn-primary text-sm">

@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MessageCircle, Heart } from 'lucide-react';
+import { Heart, MessageCircle } from 'lucide-react';
 
 const quickLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -9,9 +9,21 @@ const quickLinks = [
 ];
 
 const socialIcons = [
-  { icon: Instagram, href: 'https://instagram.com/artedental_lr', label: 'Instagram' },
-  { icon: Facebook, href: 'https://facebook.com/artedental.lr', label: 'Facebook' },
-  { icon: MessageCircle, href: 'https://wa.me/18299946879', label: 'WhatsApp' },
+  {
+    href: 'https://instagram.com/artedental_lr',
+    label: 'Instagram',
+    icon: () => (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    ),
+  },
+  {
+    href: 'https://facebook.com/artedental.lr',
+    label: 'Facebook',
+    icon: () => (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    ),
+  },
+  { href: 'https://wa.me/18299946879', label: 'WhatsApp', icon: () => <MessageCircle className="w-5 h-5" /> },
 ];
 
 export default function Footer() {
@@ -85,7 +97,7 @@ export default function Footer() {
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition-all duration-200"
                   aria-label={s.label}
                 >
-                  <s.icon className="w-5 h-5" />
+                  <s.icon />
                 </a>
               ))}
             </div>

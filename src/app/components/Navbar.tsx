@@ -20,11 +20,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">A</span>
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="Arte Dental"
+              className="h-10 w-auto"
+            />
             <span className="text-lg md:text-xl font-bold text-gray-900">
-              Arte Dental <span className="text-primary-500">LR</span>
+              Arte Dental <span className="text-accent-500">LR</span>
             </span>
           </a>
 

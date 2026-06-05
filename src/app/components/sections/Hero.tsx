@@ -83,40 +83,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Logo / Brand Mark */}
+          {/* Right: Real Logo */}
           <div className="order-1 lg:order-2 flex items-center justify-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80">
-              {/* Logo circle */}
-              <div className="w-full h-full rounded-full bg-white shadow-2xl flex items-center justify-center border border-gray-100">
-                <div className="text-center p-6">
-                  {/* Tooth icon with flanking shapes */}
-                  <div className="relative w-32 h-32 mx-auto mb-4">
-                    {/* Left wing (navy) */}
-                    <svg className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4" width="40" height="60" viewBox="0 0 40 60" fill="none">
-                      <path d="M30 0C20 10 10 25 10 45C10 55 15 60 20 60C25 60 30 55 30 50C30 45 28 35 28 25C28 15 30 5 30 0Z" fill="#1a2a6c" opacity="0.15"/>
-                    </svg>
-                    {/* Tooth */}
-                    <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" width="60" height="70" viewBox="0 0 60 70" fill="none">
-                      {/* Crown */}
-                      <path d="M10 20C10 8 15 2 30 2C45 2 50 8 50 20V35C50 55 40 68 30 68C20 68 10 55 10 35V20Z" fill="#1a2a6c"/>
-                      {/* Root left */}
-                      <path d="M15 35C15 45 22 60 26 68L20 68C14 58 10 45 10 35H15Z" fill="#1a8a9e"/>
-                      {/* Root right */}
-                      <path d="M45 35C45 45 38 60 34 68L40 68C46 58 50 45 50 35H45Z" fill="#1a8a9e"/>
-                      {/* Highlight */}
-                      <ellipse cx="30" cy="22" rx="8" ry="12" fill="white" opacity="0.2"/>
-                    </svg>
-                    {/* Right wing (teal) */}
-                    <svg className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4" width="40" height="60" viewBox="0 0 40 60" fill="none">
-                      <path d="M10 0C20 10 30 25 30 45C30 55 25 60 20 60C15 60 10 55 10 50C10 45 12 35 12 25C12 15 10 5 10 0Z" fill="#1a8a9e" opacity="0.15"/>
-                    </svg>
-                  </div>
-                  {/* Text below */}
-                  <p className="text-lg font-bold text-brand-500">Arte Dental</p>
-                  <p className="text-[10px] text-accent-600 uppercase tracking-widest mt-1">Reflejando el arte en tu sonrisa</p>
-                </div>
-              </div>
-              {/* Decorative rings */}
+              <img
+                src="/images/logo.png"
+                alt="Arte Dental La Romana"
+                className="w-full h-full object-contain drop-shadow-2xl"
+              />
               <div className="absolute inset-0 rounded-full border-2 border-brand-500/10 -z-10 scale-110" />
               <div className="absolute inset-0 rounded-full border border-accent-500/10 -z-20 scale-125" />
             </div>

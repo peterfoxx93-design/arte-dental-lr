@@ -2,6 +2,7 @@ import Hero from './components/sections/Hero';
 import Services from './components/sections/Services';
 import About from './components/sections/About';
 import Testimonials from './components/sections/Testimonials';
+import AppointmentForm from './components/sections/AppointmentForm';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 
@@ -12,6 +13,7 @@ export default function Page() {
       <Services />
       <About />
       <Testimonials />
+      <AppointmentForm />
       <Contact />
       <Footer />
     </>

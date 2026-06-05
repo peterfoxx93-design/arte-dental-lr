@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Instagram } from 'lucide-react';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -41,7 +41,16 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="#contacto" className="btn-primary text-sm">
+            <a
+              href="https://instagram.com/artedental_lr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-pink-500 font-medium transition-colors duration-200 flex items-center gap-1"
+            >
+              <Instagram className="w-4 h-4" />
+              IG
+            </a>
+            <a href="#citas" className="btn-primary text-sm">
               <Phone className="w-4 h-4 mr-2" />
               Agenda tu cita
             </a>
@@ -73,7 +82,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="#citas"
               onClick={() => setOpen(false)}
               className="btn-primary w-full text-center mt-4"
             >

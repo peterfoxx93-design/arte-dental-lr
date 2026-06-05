@@ -1,0 +1,86 @@
+'use client';
+
+import { useState } from 'react';
+import { Menu, X, Phone } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Testimonios', href: '#testimonios' },
+  { label: 'Contacto', href: '#contacto' },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <a href="#inicio" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">A</span>
+            </div>
+            <span className="text-lg md:text-xl font-bold text-gray-900">
+              Arte Dental <span className="text-primary-500">LR</span>
+            </span>
+          </a>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-600 hover:text-primary-500 font-medium transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a href="#contacto" className="btn-primary text-sm">
+              <Phone className="w-4 h-4 mr-2" />
+              Agenda tu cita
+            </a>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden p-2 text-gray-600 hover:text-primary-500"
+            onClick={() => setOpen(!open)}
+            aria-label="Menú"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden bg-white border-t shadow-lg animate-fade-in-up">
+          <div className="px-4 py-4 space-y-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block py-2 text-gray-600 hover:text-primary-500 font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contacto"
+              onClick={() => setOpen(false)}
+              className="btn-primary w-full text-center mt-4"
+            >
+              <Phone className="w-4 h-4 mr-2 inline" />
+              Agenda tu cita
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
